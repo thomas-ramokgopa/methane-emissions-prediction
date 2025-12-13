@@ -21,15 +21,46 @@ The goal is to build predictive models that can estimate methane emissions using
 
 ## Dataset
 
-The modeling dataset combines:
-
-- **Point Source Emissions Data**: Methane emissions reported by UK facilities (2018–2022)
-- **Climate Grid Data**: High-resolution NetCDF files with monthly climate observations (1 km × 1 km grid)
+The modeling dataset combines multiple data sources to capture environmental, spatial, and sectoral factors influencing facility-level methane (CH₄) emissions across the UK. The integration addresses limitations in existing CH₄ modelling approaches by combining point-source emissions records with high-resolution environmental data and contextual metadata.
 
 ### Data Sources
-- Historical point-source emissions (2018–2022)
-- Sector-level and geographic metadata
-- High-resolution climate variables from NetCDF grids
+
+**Emissions Data:**
+- **Source**: UK National Atmospheric Emissions Inventory (NAEI)
+- **Coverage**: 18,130 facility-year observations from 2018 to 2022
+- **Content**: 
+  - Annual CH₄ emission records (kilotons)
+  - Spatial coordinates (British National Grid Easting and Northing)
+  - Sector classifications using standardised industry codes
+  - Facility identifiers
+- **Sectors**: 25 industrial sectors including:
+  - Oil & Gas Exploration
+  - Waste Collection and Treatment
+  - Major Power Producers
+  - Natural Gas Processing & Distribution
+
+**Climate Data:**
+- **Source**: UK Met Office
+- **Format**: Gridded NetCDF files
+- **Spatial Resolution**: 1 km² across the UK
+- **Temporal Coverage**: Monthly measurements for 2018–2022
+- **Variables**:
+  - Mean temperature (°C)
+  - Total rainfall (mm)
+  - Wind speed (m/s)
+  - Atmospheric pressure (hPa)
+- **Processing**: Facility coordinates were transformed and spatially joined to the nearest grid cell, enabling extraction of site-specific environmental variables for seasonal and annual aggregation
+
+**Spatial and Sectoral Metadata:**
+- Regional classifications (England, Scotland, Wales, Northern Ireland)
+- Urban–rural designations
+- Facility density metrics calculated within 10 km and 25 km buffers around each point source
+- Sectoral context via national reporting frameworks and regulatory classifications
+
+### Dataset Characteristics
+- **Temporal Coverage**: Consistent five-year coverage (2018–2022) with complete alignment between emissions records and climate observations
+- **Final Feature Count**: 53 features prior to encoding (climate, spatial, sectoral, and interaction features)
+- **Purpose**: Supports temporal validation, trend analysis, and interpretable machine learning
 
 ## Methodology
 
