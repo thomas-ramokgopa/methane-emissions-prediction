@@ -62,6 +62,13 @@ The modeling dataset combines multiple data sources to capture environmental, sp
 - **Final Feature Count**: 53 features prior to encoding (climate, spatial, sectoral, and interaction features)
 - **Purpose**: Supports temporal validation, trend analysis, and interpretable machine learning
 
+### Data Files Location
+All raw data files used in this project are located in the `data_raw/` directory:
+- **Point Source Emissions**: `data_raw/point_sources/` contains 5 CSV files (one per year, 2018-2022)
+- **Climate Data**: `data_raw/climate/` contains 20 NetCDF files organized by variable (temperature, rainfall, pressure, wind) with 5 files per variable covering 2018-2022
+
+**Note**: The data files are included in this repository. Total size is approximately 777MB.
+
 ## Methodology
 
 ### Models Implemented
@@ -85,7 +92,19 @@ The modeling dataset combines multiple data sources to capture environmental, sp
 Dissertation project/
 ├── README.md
 ├── Copy_of_final_ch4_greenteai_modelling.ipynb  # Main analysis notebook
-└── Dissertation_Project.pdf  # Dissertation document
+├── Dissertation_Project.pdf  # Dissertation document
+└── data_raw/  # Raw data files used in the analysis
+    ├── point_sources/  # NAEI point source emissions data (2018-2022)
+    │   ├── point_sources_CH4_2018.csv
+    │   ├── point_sources_CH4_2019.csv
+    │   ├── point_sources_CH4_2020.csv
+    │   ├── point_sources_CH4_2021.csv
+    │   └── point_sources_CH4_2022.csv
+    └── climate/  # UK Met Office climate data (NetCDF format)
+        ├── temperature/  # 5 files (2018-2022)
+        ├── rainfall/    # 5 files (2018-2022)
+        ├── pressure/    # 5 files (2018-2022)
+        └── Wind/        # 5 files (2018-2022)
 ```
 
 ## Getting Started
