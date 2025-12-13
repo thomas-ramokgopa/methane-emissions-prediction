@@ -4,7 +4,7 @@
 
 This project develops supervised machine learning models to predict methane (CH₄) emissions from UK facilities using spatial, sectoral, and climate data.
 
-## 📋 Project Overview
+## Project Overview
 
 The goal is to build predictive models that can estimate methane emissions using contextual data sources, including:
 
@@ -12,14 +12,14 @@ The goal is to build predictive models that can estimate methane emissions using
 - **Spatial and geographic context**: Urbanicity, region, population density
 - **Sectoral and operator-level metadata**: Industry sector, facility operator information
 
-## 🎯 Objectives
+## Objectives
 
 - Train and evaluate multiple regression models to estimate CH₄ emissions
 - Compare performance across model types using standard metrics (R², MAE, RMSE)
 - Use SHAP values to interpret model predictions and identify key drivers
 - Extract spatial, sectoral, and environmental insights relevant to climate policy
 
-## 📊 Dataset
+## Dataset
 
 The modeling dataset combines:
 
@@ -31,7 +31,7 @@ The modeling dataset combines:
 - Sector-level and geographic metadata
 - High-resolution climate variables from NetCDF grids
 
-## 🔧 Methodology
+## Methodology
 
 ### Models Implemented
 - Baseline Linear Regression
@@ -48,16 +48,16 @@ The modeling dataset combines:
 ### Model Explainability
 - SHAP (SHapley Additive exPlanations) values for feature importance analysis
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Dissertation project/
 ├── README.md
 ├── Copy_of_final_ch4_greenteai_modelling.ipynb  # Main analysis notebook
-└── 897971_Thomas_Ramokgopa_Dissertation_Project_7240302_47196390 (2).pdf  # Dissertation document
+└── Dissertation_Project.pdf  # Dissertation document
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -92,7 +92,7 @@ shap
 pip install pandas numpy xarray netCDF4 pyproj matplotlib seaborn geopandas plotly scikit-learn xgboost lightgbm shap
 ```
 
-## 📓 Notebook Overview
+## Notebook Overview
 
 The main notebook (`Copy_of_final_ch4_greenteai_modelling.ipynb`) is organized as follows:
 
@@ -117,28 +117,28 @@ The main notebook (`Copy_of_final_ch4_greenteai_modelling.ipynb`) is organized a
 7. **Sources**  
    References for datasets and domain methodologies.
 
-## 🔬 Key Features
+## Key Features
 
 - **Target Variable**: Log-transformed methane emissions (`log_emission`)
 - **Time Period**: 2018 to 2022
 - **Geographic Scope**: United Kingdom
 - **Spatial Resolution**: 1 km × 1 km grid cells
 
-## 📈 Results
+## Results
 
 [Results and findings will be documented here after model evaluation]
 
-## 📚 References
+## References
 
 [References and data sources will be listed here]
 
-## 👤 Author
+## Author
 
 **Thomas Ramokgopa**  
 MSc Business Analytics Consultancy  
 2024-25
 
-## 📄 License
+## License
 
 This project is submitted as part of academic coursework. Please refer to the confidentiality statement in the dissertation document.
 
